@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Orbitron&family=Press+Start+2P&display=swap");
+
+:root {
+  --prim-font: "Luckiest Guy", cursive;
+  --secon-font: "Orbitron", sans-serif;
+  --tert-font: "Press Start 2P", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #03233b;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 2px solid white;
+  background-color: #3d607b;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+  margin: 10px;
+  width: 750px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-family: var(--tert-font);
+  font-size: 37px;
+  color: #b00000;
+  font-weight: 800;
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+
+.box {
+  margin: 10px;
+  padding: 20px;
+}
+
+.gameIcon img {
+  width: 210px;
+  height: 113px;
+  border-radius: 15px;
+}
+
+#simon:hover,
+#rps:hover,
+#blackjack:hover {
+  cursor: pointer;
+  padding-bottom: 30px;
+  padding-top: 9px;
+}
+
+#game-modal {
+  display: none;
+}
+
+.close {
+  font-family: "Luckiest Guy", cursive;
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  font-size: 19px;
+  padding: 8px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  background-color: #5a5252;
+}
+
+.close:hover {
+  background-color: red;
+}
