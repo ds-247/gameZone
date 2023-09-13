@@ -11,13 +11,15 @@
     />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/rps.css" />
+    <link rel="stylesheet" href="./styles/simon.css" />
+    <link rel="stylesheet" href="./styles/blackjack.css" />
   </head>
   <body>
     <div class="main">
       <!-- Modal Window -->
-      <div id="game-modal" class="modal">
-        <div class="close" onclick="closeGame()">X</div>
-        <div class="modal-content">
+      <div id="game-modal" class="hide">
+        <div class="close" >X</div>
+        <div id="modal-content" class="">
           <iframe
             id="game-frame"
             src=""
@@ -32,21 +34,21 @@
         <div class="flex-wrap gameIcon">
           <div id="rps" class="box">
             <img
-              onclick="openGame('game1')"
+            id="RPS"
               src="./assets/animations/Cheers!.gif"
               alt="Your Animation"
             />
           </div>
           <div id="simon" class="box">
             <img
-              onclick="openGame('game1')"
+            id="SIMON"
               src="./assets/animations/Simon Says Memory Master.gif"
               alt="Your Animation"
             />
           </div>
           <div id="blackjack" class="box">
             <img
-              onclick="openGame('game1')"
+            id="BLACKJACK"
               src="./assets/animations/Hit or Stand Play Blackjack Online!.gif"
               alt="Your Animation"
             />
@@ -54,9 +56,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="game-icon" onclick="openGame('game1')">Game 1 Icon</div> -->
-    <!-- <div class="game-icon" onclick="openGame('game2')">Game 2 Icon</div> -->
 
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"

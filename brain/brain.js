@@ -1,24 +1,52 @@
-// Function to open the game modal
-function openGame(gameId) {
-  const modal = document.getElementById("game-modal");
-  const gameFrame = document.getElementById("game-frame");
-  const gameUrl = "https://ds-247.github.io/integratedRps/"; // Set the URL of your game
+const gamesData = {
+  RPS: "https://ds-247.github.io/integratedRps/",
+  SIMON: "https://ds-247.github.io/simon/",
+  BLACKJACK: " https://ds-247.github.io/blackJack/",
+};
 
-  gameFrame.src = gameUrl;
-  modal.style.display = "block";
 
-  // Add the "RPS" class to the modal content using JavaScript
-  const modalContent = document.querySelector(".modal-content");
-  modalContent.classList.add("RPS");
 
-  modal.style.position = "absolute";
-}
+$('img').click( elem => {
+  const gameName = elem.target.id;
+  const gameUrl = gamesData[gameName];
 
-// Function to close the game modal
-function closeGame() {
-  var modal = document.getElementById("game-modal");
-  modal.style.display = "none";
-}
+  $("#game-modal").attr("class",'visible');
+
+  $('iframe').attr('src',`${gameUrl}`);
+
+  $('#modal-content').addClass(`${gameName}`);
+})
+
+
+$('.close').on("click", ()=>{
+  $("#game-modal").attr("class","hide");
+  $('#modal-content').attr("class","");
+  // location.reload();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // for controlling the playback of gif <img id="gif" src="your-animation.gif" alt="Your Animation">
 
