@@ -1,0 +1,13 @@
+.BLACKJACK {
+    background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 548px;
+  width: 900px;
+}
+
+.BLACKJACK iframe {
+  width: 100%;
+  height: 100%;
+}
